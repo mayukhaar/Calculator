@@ -1,17 +1,19 @@
 print("BASIC CALCULATOR")
 print(".................")
-print("These are instructions on how to use this calculator ")
-print("                     ")
+print("Instructions:")
+print("-Enter the operation first, then enter the values in the order you want ")
+print("the calculator to solve them.")
+print("-When doing operations with powers, enter the base number first, then "
+      "input the exponential value")
+print("as the second number the calculator asks you to enter.")
+print("-Enjoy :)")
+print(" ")
 
 repeat = "Y"
-
 
 while repeat == "Y" or repeat == "y":
 
     op = input("Enter operation (+,-,*,/,^): ")
-    if op != "+" or op != "-" or op != "*" or op != "/" or op != "^":
-        print("Invalid operation.")
-        op = input("Enter operation (+,-,*,/,^): ")
     num_1 = float(input( "Enter a number: "))
     num_2 = float(input("Enter another number: "))
     if op == "+":
@@ -35,22 +37,10 @@ while repeat == "Y" or repeat == "y":
         print("Answer: " + str(power))
         repeat = input("Do you want to enter another calculation (Y/N): ")
     else:
+
         print("Invalid operation.")
 
 
 print("Bye! Have a nice day:)")
-
-#repeat = input("Do you want to enter another calculation (Y/N: ")
-
-
-#else:
-#print("jdhsf")
-    #if repeat == "N":
-       # print("Bye! Have a nice day :)")
-    #else:
-      #  print ("Invalid operation.")
-      #  print(repeat)
-
-
 
 
