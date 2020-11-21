@@ -6,9 +6,12 @@ print("                     ")
 repeat = "Y"
 
 
-while repeat == "Y":
+while repeat == "Y" or repeat == "y":
 
-    op = input("Enter operation: ")
+    op = input("Enter operation (+,-,*,/,^): ")
+    if op != "+" or op != "-" or op != "*" or op != "/" or op != "^":
+        print("Invalid operation.")
+        op = input("Enter operation (+,-,*,/,^): ")
     num_1 = float(input( "Enter a number: "))
     num_2 = float(input("Enter another number: "))
     if op == "+":
@@ -27,8 +30,13 @@ while repeat == "Y":
         divide = float(num_1) / float(num_2)
         print("Answer: " + str(divide))
         repeat = input("Do you want to enter another calculation (Y/N): ")
+    elif op == "^":
+        power = float(num_1) ** float(num_2)
+        print("Answer: " + str(power))
+        repeat = input("Do you want to enter another calculation (Y/N): ")
     else:
         print("Invalid operation.")
+
 
 print("Bye! Have a nice day:)")
 
